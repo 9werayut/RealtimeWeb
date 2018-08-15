@@ -27,3 +27,10 @@ const saveToFirebase = (email, password, address) => {
 
     init();
 }
+
+const onDelete = () => {
+    var firebaseRef = firebase.database().ref('User/User2');
+    firebaseRef.remove()
+        .then(() => console.log("Remove success"))
+        .catch(err => console.log("Remove fail: " + err.message));
+}
