@@ -1,0 +1,13 @@
+{
+  "User" : {
+    "User1" : "werayut",
+    "User2" : "Firebase",
+    "User3" : "Realtime",
+    "User4" : {
+      "Name" : "werayut",
+      "e-mail" : "werayut.ku@gmail.com",
+      "sex" : "male",
+      "tel" : "0828828552"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Firebase Realtime DB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>FireBase - RealTime Database on Web</h1>
+            <br />
+            <div class="form-group">
+                <label for="usr">E-Mail:</label>
+                <input type="email" placeholder="Enter your Email" class="form-control" id="email" />
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" placeholder="Enter your Password" class="form-control" id="password" />
+                <label for="pwd">Address:</label>
+                <textarea name="address" id="address" cols="80" rows="8" class="form-control"></textarea>
+            </div>
+            <button id="btnSave" name="Save" class="btn btn-primary" onclick="onSave()">Save</button>
+            &nbsp;&nbsp;&nbsp;
+            <button id="btnDel" name="Delete" class="btn btn-danger">Delete</button>
+            &nbsp;&nbsp;&nbsp;
+            <button id="btnUpdate" name="Update" class="btn btn-success">Update</button>
+            &nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDMZkdlzX0fYkfpG1EABOECB3U4xQAz97Y",
+    authDomain: "fir-realtimeweb-866c1.firebaseapp.com",
+    databaseURL: "https://fir-realtimeweb-866c1.firebaseio.com",
+    projectId: "fir-realtimeweb-866c1",
+    storageBucket: "fir-realtimeweb-866c1.appspot.com",
+    messagingSenderId: "1041608682800"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="app.js" type="text/javascript"></script>
+</body>
+</html>
