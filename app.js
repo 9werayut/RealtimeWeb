@@ -3,12 +3,14 @@ window.onload = () => {
 }
 
 const init = () => {
-    var firebaseRef = firebase.database().ref('User');
+    var firebaseRef = firebase.database().ref('User').orderByChild("address");
     firebaseRef.once('value').then(snapshot => {
-        console.log('====================================');
-        console.log(snapshot.val());
-        console.log('====================================');
-    })
+        snapshot.forEach(child => {
+            var childKey = child.key;
+            var childValue = child.val();
+            console.log(childValue);
+        });
+    });
 }
 
 const onSave = () => {
