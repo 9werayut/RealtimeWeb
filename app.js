@@ -34,3 +34,15 @@ const onDelete = () => {
         .then(() => console.log("Remove success"))
         .catch(err => console.log("Remove fail: " + err.message));
 }
+
+const onUpdate = () => {
+    var firebaseRef = firebase.database().ref('User/User1');
+    firebaseRef.update({
+        address: '1111',
+        email: '11111@gmail.com',
+        password: 11111
+    })
+    .then(() => console.log("Update success"))
+    .catch(err => console.log("Update fail: " + err.message));
+
+}
